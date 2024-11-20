@@ -1,10 +1,8 @@
 """Car route endpoints"""
 
 from typing import List
-import json
-
 from fastapi import APIRouter, HTTPException, status, Response
-from models.car import Car, CarUpdate, CarOut, CarID, CarStatus
+from models.car import Car, CarUpdate, CarOut, CarID
 from datetime import datetime, timezone
 
 

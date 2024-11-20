@@ -2,8 +2,8 @@ from beanie import Document, Link
 from datetime import datetime
 
 # other models
-# from customer import Customer
-# from car import Car
+from customer import Customer
+from car import Car
 from enum import Enum
 
 
@@ -15,8 +15,8 @@ class OrderStatus(Enum):
 
 class Order(Document):
     """Order DB representation"""
-    # customer_id: Link[Customer]
-    # car_id: Link[Car]
+    customer_id: Link[Customer]
+    car_id: Link[Car]
     order_date: datetime
     delivery_date: datetime | None = None
     status: OrderStatus

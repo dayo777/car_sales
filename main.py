@@ -17,12 +17,11 @@ from models.order import Order
 # import routes here
 from routes import car as car_route
 from routes import customer as customer_route
-# from routes import order as OrderRoute
 
 config = dotenv_values(".env")
 
-conn_str = config['MONGO_URI'] # change this to the MONGO-DB connection string
-database_name = config['DB_NAME'] # change this to the MONGO-DB database name
+conn_str = config['MONGO_URI'] # set this to the MONGO-URI conn string
+database_name = config['DB_NAME'] # set this as the DB name
 
 
 @asynccontextmanager
